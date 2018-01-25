@@ -9,6 +9,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import zorbaq.misc.Miscellanea;
+import zorbaq.misc.item.ItemSmokingPipe;
 
 
 
@@ -41,6 +43,7 @@ public class CommonProxy {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
+    	event.getRegistry().register((new ItemSmokingPipe()).setUnlocalizedName(Miscellanea.MODID + ".itemsmokingpipe").setRegistryName("itemsmokingpipe"));
     	//event.getRegistry().register(new ItemBlock(ModBlocks.blockAnalyzer).setRegistryName(ModBlocks.blockAnalyzer.getRegistryName()));
     	//event.getRegistry().register(new ItemBlock(ModBlocks.blockFluidNanofluid).setRegistryName(ModBlocks.blockFluidNanofluid.getRegistryName()));
     }
